@@ -1,0 +1,27 @@
+{
+  "name": "misheats---reactjs",
+  "version": "1.0.0",
+  "description": "Its a food delivery app.",
+  "repository": {
+    "type": "git",
+    "url": "MishEats - ReactJS"
+  },
+  "license": "ISC",
+  "author": "Amisha Singh",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+    "browserslist": [
+    "last 2 versions"
+  ]
+}

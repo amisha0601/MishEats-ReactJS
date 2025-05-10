@@ -18,7 +18,7 @@
     padding: 0 20px;
     border: 1px solid black;
     align-items: center;
-    background-color:rgb(116, 13, 107);
+    background-color:rgb(199, 0, 109);
     /* background-color:rgb(68, 23, 82); */
 
 }
@@ -30,7 +30,7 @@
 
 
 .nav-items>ul {
-    color:rgb(234, 209, 150);
+    color:rgb(26, 2, 34);
     font-size: 24px;
     display: flex; 
     list-style-type: none;
@@ -72,7 +72,7 @@
 }
 .res-card{
     border-radius: 30px;
-    background-color:rgb(216, 149, 218);
+    background-color:rgb(255, 159, 70);
     width: 200px;
     padding: 10px;
     border: 1px solid transparent;
@@ -92,6 +92,17 @@
 }
 
 .body{
-     background-color:rgb(233, 195, 235); 
+     background-color:rgb(239, 120, 255); 
      /* background-color:rgb(252, 249, 80);  */
 }
+
+.filter{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 10px;
+}
+.filter-btn  {
+    padding: 10px 15px;
+    cursor: pointer;
+  }

@@ -4,3 +4,4 @@
  export const LOGO_URL = 
 "https://storage.pixteller.com/designs/designs-images/2018-07-27/07/logo-design-branding-logo-food-chicken-meal-1-5b5b4e837e90c.png";
 
+export const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=";

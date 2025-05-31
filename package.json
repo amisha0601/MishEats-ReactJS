@@ -1,8 +1,8 @@
 {
-  "name": "misheats---reactjs",
+  "name": "MishEats-ReactJS",
   "version": "1.0.0",
   "description": "Its a food delivery app.",
-  "repository": {
+    "repository": {
     "type": "git",
     "url": "MishEats - ReactJS"
   },
@@ -14,14 +14,17 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
+  "devDependencies": {
+    "parcel": "^2.15.1",
+    "process": "^0.11.10"
+  },
+
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+        "react-router-dom": "^6.30.0"
   },
-  "devDependencies": {
-    "parcel": "^2.14.4"
-  },
-    "browserslist": [
+       "browserslist": [
     "last 2 versions"
   ]
 }

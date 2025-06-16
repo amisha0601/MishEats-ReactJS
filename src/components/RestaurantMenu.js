@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu.js";
 
 
-const RestaurantMenu = () => {
+const RestaurantMenu = () => { 
 
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) return <Shimmer/>;
 
-  const { name , cuisines , cloudinaryImageId , costForTwoMessage ,  } = resInfo?.cards[2]?.card?.card?.info || "Restaurant Name Not Found"
+  const { name , cuisines , costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info || "Restaurant Name Not Found"
 
     const itemCards =
   resInfo?.cards

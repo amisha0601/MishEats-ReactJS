@@ -68,11 +68,12 @@ const WhenOffline = () => {
   useEffect(() => {
     if (cards.length > 0 && cards.every(card => card.matched)) {
       setCompleted(true);
+      setDisabled(true);
     }
   }, [cards]);
 
   const handleCardClick = (index) => {
-    if (disabled || flipped.includes(index) || cards[index].matched) return;
+    if (disabled || timeLeft <= 0 || flipped.includes(index) || cards[index].matched) return;
 
     const newFlipped = [...flipped, index];
     setFlipped(newFlipped);
@@ -151,7 +152,8 @@ const WhenOffline = () => {
     display: 'grid',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gap: '8px',
-    marginTop: '10px'
+    marginTop: '10px',
+    position: 'relative' // ✅ Make this relative so overlay can stay inside it.
   };
 
   const buttonStyles = {
@@ -173,6 +175,25 @@ const WhenOffline = () => {
     border: '2px solid #ccc'
   };
 
+  const overlayStyles = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '22px',
+    fontWeight: 'bold',
+    color: '#6b3a80',
+    zIndex: 2,
+    borderRadius: '10px',
+    padding: '10px',
+    textAlign: 'center'
+  };
+
   return (
     <div style={outerWrapper}>
       <h2 style={headingStyles}>You're Offline!</h2>
@@ -181,6 +202,7 @@ const WhenOffline = () => {
       <div style={gameStyles}>
         <h1 style={{ color: '#3b0067' }}>MIND MUNCH</h1>
         <p><strong>Time Left:</strong> {timeLeft}s | <strong>Score:</strong> {score}</p>
+
         <div>
           <label><strong>Select Level:</strong> </label>
           <select style={selectStyles} value={level} onChange={(e) => setLevel(e.target.value)}>
@@ -189,7 +211,15 @@ const WhenOffline = () => {
             <option value="hard">Hard</option>
           </select>
         </div>
+
         <div style={gridStyles}>
+          {/* ✅ Put overlay inside grid area so it doesn’t block button */}
+          {(timeLeft <= 0 && !completed) && (
+            <div style={overlayStyles}>⏰ Time's Up!</div>
+          )}
+          {(completed && timeLeft > 0) && (
+            <div style={overlayStyles}>🎉 You Matched All!</div>
+          )}
           {cards.map((card, index) => (
             <Card
               key={card.id}
@@ -199,6 +229,7 @@ const WhenOffline = () => {
             />
           ))}
         </div>
+
         <button style={buttonStyles} onClick={resetGame}>Restart Game</button>
       </div>
     </div>

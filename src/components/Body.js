@@ -18,6 +18,8 @@ const Body = () => {
     handleTopRatedFilter,
   } = useRestaurantFilter(listOfRestaurants);
 
+  console.log("Body Rendered",listOfRestaurants)
+
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [isTopRatedClicked, setIsTopRatedClicked] = useState(false);
 

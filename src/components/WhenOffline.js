@@ -25,7 +25,7 @@ const Card = ({ card, onClick, isFlipped }) => {
     justifyContent: 'center',
     alignItems: 'center',
     fontSize: '28px',
-    backgroundColor: isFlipped || card.matched ? '#fff' : 'rgb(139, 70, 185)',
+    backgroundColor: isFlipped || card.matched ? '#fff' : 'rgb(129, 75, 133)',
     color: isFlipped || card.matched ? '#000' : '#fff',
     border: '2px solid rgb(65, 16, 100)',
     borderRadius: '8px',
@@ -158,8 +158,8 @@ const WhenOffline = () => {
 
   const buttonStyles = {
     marginTop: '20px',
-    backgroundColor: '#2d0647',
-    color: '#fff',
+    backgroundColor: '#6dbfb8',
+    color: '',
     border: 'none',
     padding: '10px 16px',
     borderRadius: '16px',

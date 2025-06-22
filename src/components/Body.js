@@ -18,7 +18,7 @@ const Body = () => {
     handleTopRatedFilter,
   } = useRestaurantFilter(listOfRestaurants);
 
-  console.log("Body Rendered",listOfRestaurants)
+  // console.log("Body Rendered",listOfRestaurants)
 
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [isTopRatedClicked, setIsTopRatedClicked] = useState(false);
@@ -29,8 +29,8 @@ const Body = () => {
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="bg-violet-100 mt-8"> 
-    <div className="body max-w-[1200px] mx-auto bg-purple-100">
+    <div className=" mt-10"> 
+    <div className="body max-w-[1200px] mx-auto ">
       <div className="filter flex">
         <div className="search m-4 p-4 ">
           <input

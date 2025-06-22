@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import ItemList from "./ItemList";
 import { ChevronDown } from "lucide-react";
 
-const RestaurantCategory = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
+const RestaurantCategory = ({ data,showItems , setShowIndex }) => {
+  // const [showItems, setShowItems] = useState(false);
 
-  // console.log(data);
+  // // console.log(data);
   const handleClick = () => {
-    setShowItems(!showItems);
-  };
+    // setShowItems(!showItems);
+    setShowIndex();
+  }
   return (
     <div>
       {/* Header */}

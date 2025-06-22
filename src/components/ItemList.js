@@ -15,7 +15,9 @@ const ItemList = ({ items }) => {
               {item.card.info.name}
             </h3>
             <p className="text-sm font-semibold text-gray-800 mb-1">
-              ₹{item.card.info.price / 100}
+              ₹{item.card.info.price
+                  ? item.card.info.price / 100
+                  : item.card.info.defaultPrice / 100}
             </p>
             <p className="text-xs text-gray-600">
               {item.card?.info?.description}

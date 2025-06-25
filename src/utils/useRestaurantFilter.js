@@ -17,12 +17,12 @@ const useRestaurantFilter = (listOfRestaurants) => {
 
   const handleTopRatedFilter = () => {
     const filteredList = listOfRestaurants.filter(
-      (res) => parseFloat(res.info.avgRating) > 4
+      (res) => parseFloat(res.info.avgRating) >= 4.4
     );
     setFilteredRestaurant(filteredList);
   };
 
-  return {
+  return { 
     searchText,
     setSearchText,
     filteredRestaurant,

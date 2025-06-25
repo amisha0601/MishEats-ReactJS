@@ -2,7 +2,8 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { Menu, X } from "lucide-react"; // ✅ Correct usage!
+import { Menu, X, Salad } from "lucide-react";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
@@ -10,6 +11,8 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
   const isLoggedIn = btnNameReact === "Logout";
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   const toggleLogin = () => {
     setBtnNameReact(isLoggedIn ? "Login" : "Logout");
@@ -46,17 +49,33 @@ const Header = () => {
             </span>
           </li>
           <li className="px-2">
-            <Link to="/" className="font-semibold hover:underline">Home</Link>
+            <Link to="/" className="font-semibold hover:underline">
+              Home
+            </Link>
           </li>
           <li className="px-2">
-            <Link to="/about" className="font-semibold hover:underline">About Us</Link>
+            <Link to="/about" className="font-semibold hover:underline">
+              About Us
+            </Link>
           </li>
           <li className="px-2">
-            <Link to="/contact" className="font-semibold hover:underline">Contact Us</Link>
+            <Link to="/contact" className="font-semibold hover:underline">
+              Contact Us
+            </Link>
           </li>
-          <li className="pr-6">
-            <span className="font-semibold hover:underline">Cart</span>
+
+          {/* Cart Icon with Badge */}
+          <li className="relative pr-6">
+            <Link to="/cart" className="font-semibold hover:underline">
+              <Salad size={30} />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-green-600 text-navbar-text text-xs font-semibold rounded-lg px-2 py-[1px] shadow-md">
+                  {cartItems.length}
+                </span>
+              )}
+            </Link>
           </li>
+
           <li className="px-2">
             <button
               className={`px-4 py-2 text-sm font-semibold text-navbar-text border-navbar-text border-2 border-x-4 rounded-2xl cursor-pointer 
@@ -74,10 +93,33 @@ const Header = () => {
         <div className="max-w-[1280px] mx-auto">
           <ul className="flex flex-col md:hidden gap-4 px-4 pb-4 text-navbar-text font-semibold">
             <li>Active: {onlineStatus ? "🌷" : "❌"}</li>
-            <li><Link to="/" onClick={handleMobileNav}>Home</Link></li>
-            <li><Link to="/about" onClick={handleMobileNav}>About Us</Link></li>
-            <li><Link to="/contact" onClick={handleMobileNav}>Contact Us</Link></li>
-            <li><span>Cart</span></li>
+            <li>
+              <Link to="/" onClick={handleMobileNav}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={handleMobileNav}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={handleMobileNav}>
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/cart" onClick={handleMobileNav}>
+                <div className="flex items-center gap-1">
+                  <Salad size={22} />
+                  {cartItems.length > 0 && (
+                    <span className="bg-red-600 text-white text-xs font-bold rounded-full px-2 py-[1px] shadow">
+                      {cartItems.length}
+                    </span>
+                  )}
+                </div>
+              </Link>
+            </li>
             <li>
               <button
                 className={`px-4 py-2 text-sm font-semibold text-navbar-text border-navbar-text border-2 border-x-4 rounded-2xl cursor-pointer 

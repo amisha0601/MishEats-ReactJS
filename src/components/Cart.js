@@ -103,7 +103,7 @@ const Cart = () => {
                     <img
                       src={CDN_URL + item.card.info.imageId}
                       alt={item.card.info.name}
-                      className="w-full h-[100px] object-cover rounded-lg shadow-xl"
+                      className="w-full h-[100px] object-cover rounded-lg shadow-lg/60"
                     />
                   </div>
                 </div>

@@ -26,8 +26,8 @@ const Header = () => {
     <header className="bg-navbar shadow-2xl/80 shadow-navbar px-4">
       <div className="max-w-[1280px] mx-auto flex justify-between items-center py-2">
         {/* Logo */}
-        <div className="logo-container">
-          <img className="w-30 sm:w-[140px]" src={LOGO_URL} alt="App logo" />
+        <div className="logo-container w-[120px] sm:w-[140px]">
+          <img className="w-full" src={LOGO_URL} alt="App logo" />
         </div>
 
         {/* Hamburger icon (mobile only) */}
@@ -44,7 +44,7 @@ const Header = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex px-2 py-1 text-navbar-text items-center gap-4">
           <li className="px-2">
-            <span className="hover:font-bold transition-all duration-150">
+            <span className="font-semibold hover:font-bold transition-all duration-150">
               Active: {onlineStatus ? "🌷" : "❌"}
             </span>
           </li>
@@ -90,8 +90,8 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="max-w-[1280px] mx-auto">
-          <ul className="flex flex-col md:hidden gap-4 px-4 pb-4 text-navbar-text font-semibold">
+        <div className="max-w-[1280px] mx-auto md:hidden">
+          <ul className="flex flex-col gap-4 px-4 pb-4 text-navbar-text font-semibold">
             <li>Active: {onlineStatus ? "🌷" : "❌"}</li>
             <li>
               <Link to="/" onClick={handleMobileNav}>
@@ -140,3 +140,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

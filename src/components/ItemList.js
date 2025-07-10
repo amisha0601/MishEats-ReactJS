@@ -7,14 +7,14 @@ const ItemList = ({ items }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.items);
 
-  // Find quantity from cart
+  // quantity from cart
   const getQuantity = (id) => {
     const found = cartItems.find((i) => i.card.info.id === id);
     return found ? found.quantity : 0;
   };
 
   return (
-    <div>
+    <div className="px-2 sm:px-4">
       {items.map((item) => {
         const id = item.card.info.id;
         const quantity = getQuantity(id);
@@ -22,10 +22,10 @@ const ItemList = ({ items }) => {
         return (
           <div
             key={id}
-            className="p-3 m-3 border-b-2 border-gray-300 shadow-lg/40 flex justify-between items-start"
+            className="p-3 m-3 border-b-2 border-gray-300 shadow-lg/40 flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 bg-white/80"
           >
             {/* Left Content */}
-            <div className="w-8/12 pr-4">
+            <div className="w-full sm:w-8/12 sm:pr-4 text-center sm:text-left">
               <h3 className="font-semibold text-base text-gray-800 mb-1">
                 {item.card.info.name}
               </h3>
@@ -40,15 +40,15 @@ const ItemList = ({ items }) => {
               </p>
             </div>
 
-            {/* Right Image and + - Controls */}
-            <div className="w-3/12 relative">
+            {/* Right Image and Controls */}
+            <div className="w-full sm:w-3/12 relative">
               <img
                 src={CDN_URL + item.card.info.imageId}
                 alt={item.card.info.name}
                 className="w-full h-[100px] object-cover rounded-lg shadow-md"
               />
 
-              {/* + - or ADD Button */}
+              {/*ADD Button */}
               {quantity === 0 ? (
                 <button
                   className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-green-600 text-navbar-text text-xs font-semibold px-4 py-[2px] rounded-sm shadow-md hover:bg-green-700"

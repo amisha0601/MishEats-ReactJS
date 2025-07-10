@@ -153,12 +153,12 @@ const WhenOffline = () => {
     gridTemplateColumns: 'repeat(5, 1fr)',
     gap: '8px',
     marginTop: '10px',
-    position: 'relative' // ✅ Make this relative so overlay can stay inside it.
+    position: 'relative' 
   };
 
   const buttonStyles = {
     marginTop: '20px',
-    backgroundColor: '#6dbfb8',
+    backgroundColor: '#03a540',
     color: '',
     border: 'none',
     padding: '10px 16px',
@@ -213,7 +213,7 @@ const WhenOffline = () => {
         </div>
 
         <div style={gridStyles}>
-          {/* ✅ Put overlay inside grid area so it doesn’t block button */}
+        
           {(timeLeft <= 0 && !completed) && (
             <div style={overlayStyles}>⏰ Time's Up!</div>
           )}

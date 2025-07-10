@@ -10,15 +10,24 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
-import { Toaster } from "react-hot-toast"; 
+import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
+import { useLocation } from "react-router-dom";
+
 
 const AppLayout = () => {
+
+  const location = useLocation();
+  const hideFooterRoutes = ["/about", "/contact"];
+  const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+
   return (
     <Provider store={appStore}>
       <div className="app">
         <Header />
         <Outlet />
         <Toaster position="top-center" reverseOrder={false} /> 
+         {!shouldHideFooter && <Footer />}
       </div>
     </Provider>
   );

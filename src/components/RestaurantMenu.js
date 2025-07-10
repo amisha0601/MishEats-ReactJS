@@ -7,20 +7,18 @@ import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
-
   const [showIndex, setShowIndex] = useState(null);
 
-  if (resInfo === null) return <Shimmer />;
+  if (resInfo === null) {
+    return (
+      <div className="min-h-[80vh] flex items-center justify-center">
+        <Shimmer />
+      </div>
+    );
+  }
 
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info || "Restaurant Name Not Found";
-
-  const itemCards =
-    resInfo?.cards
-      ?.find((card) => card.groupedCard)
-      ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.find(
-        (card) => card.card?.card?.itemCards
-      )?.card?.card?.itemCards || [];
 
   const itemCategories =
     resInfo?.cards
@@ -31,25 +29,20 @@ const RestaurantMenu = () => {
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
       ) || [];
 
-  // console.log(cuisines);
-
   return (
-    <div className="menu text-center">
+    <div className="menu max-w-[1200px] mx-auto px-4 mt-10 min-h-[80vh] text-center">
       <h1 className="font-bold my-8 text-3xl">{name}</h1>
-      <p className="font-semibold text-m">
-        {cuisines.join(", ")} - {costForTwoMessage}{" "}
+      <p className="font-semibold text-m mb-6">
+        {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      {/* itemCategories accordions */}
+
       {itemCategories.map((category, index) => {
-        {
-          /* controlled component */
-        }
         const data = category?.card?.card || category?.card;
         return data ? (
           <RestaurantCategory
             key={data.title}
             data={data}
-            showItems={index === showIndex ? true : false}
+            showItems={index === showIndex}
             setShowIndex={() => setShowIndex(index === showIndex ? null : index)}
           />
         ) : null;
@@ -57,4 +50,5 @@ const RestaurantMenu = () => {
     </div>
   );
 };
+
 export default RestaurantMenu;

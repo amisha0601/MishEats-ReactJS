@@ -30,7 +30,7 @@ const Header = () => {
           <img className="w-full" src={LOGO_URL} alt="App logo" />
         </div>
 
-        {/* Hamburger icon (mobile only) */}
+        {/* Hamburger icon */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

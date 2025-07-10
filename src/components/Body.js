@@ -18,8 +18,6 @@ const Body = () => {
     handleTopRatedFilter,
   } = useRestaurantFilter(listOfRestaurants);
 
-  // console.log("Body Rendered",listOfRestaurants)
-
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [isTopRatedClicked, setIsTopRatedClicked] = useState(false);
 
@@ -27,48 +25,50 @@ const Body = () => {
   if (onlineStatus === false) return <WhenOffline />;
 
   return listOfRestaurants?.length === 0 ? (
-    <Shimmer />
+    <div className="min-h-[80vh] flex items-center justify-center">
+      <Shimmer />
+    </div>
   ) : (
-    <div className=" mt-10">
-      <div className="body max-w-[1200px] mx-auto ">
-        <div className="filter flex">
-          <div className="search m-4 p-4 ">
+    <div className="mt-10 ">
+      <div className="body max-w-[1200px] mx-auto px-4 ">
+        <div className="filter flex flex-col sm:flex-row gap-4 sm:gap-0">
+          <div className="search m-4 p-4">
             <input
               type="text"
-              placeholder="Search a restaurant you want..."
-              className="search-box text-navbar py-1 border-navbar border-1 shadow-2xl rounded-md mx-1 "
+              placeholder="  Search restaurants"
+              className="search-box text-navbar text-sm sm:text-base py-1 border-navbar border-1 shadow-2xl rounded-md mx-1"
               value={searchText}
-              onChange={(e) => {
-                setSearchText(e.target.value);
-              }}
+              onChange={(e) => setSearchText(e.target.value)}
             />
             <button
               onClick={() => {
                 handleSearch();
                 setIsSearchClicked(!isSearchClicked);
               }}
-              className={`p-1 text-navbar-text p border-navbar border-2 shadow-2xl rounded-lg cursor-pointer 
-            ${isSearchClicked ? "bg-navbar" : "bg-button"}`}
+              className={`text-navbar-text text-sm sm:text-base border-navbar border-2 shadow-2xl rounded-lg cursor-pointer p-1 mx-1 ${
+                isSearchClicked ? "bg-navbar" : "bg-button"
+              }`}
             >
               Search
             </button>
           </div>
 
-          <div className="m-4 p-4 ">
+          <div className="m-4 p-4">
             <button
               onClick={() => {
                 handleTopRatedFilter();
                 setIsTopRatedClicked(!isTopRatedClicked);
               }}
-              className={`filter-btn  text-navbar-text border-navbar border-2 shadow-2xl rounded-lg cursor-pointer p-1
-            ${isTopRatedClicked ? "bg-navbar" : "bg-button"}`}
+              className={`filter-btn text-navbar-text text-sm sm:text-base border-navbar border-2 shadow-2xl rounded-lg cursor-pointer p-1 ${
+                isTopRatedClicked ? "bg-navbar" : "bg-button"
+              }`}
             >
               Top Rated Restaurants
             </button>
           </div>
         </div>
 
-        <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+        <div className="res-container shadow-@xl/90 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
           {filteredRestaurant.map((restaurant) => (
             <Link
               key={restaurant.info.id}

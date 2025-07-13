@@ -24,8 +24,9 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <WhenOffline />;
 
+
   return listOfRestaurants?.length === 0 ? (
-    <div className="min-h-[80vh] flex items-center justify-center">
+    <div  className="min-h-[80vh] flex items-center justify-center">
       <Shimmer />
     </div>
   ) : (
@@ -34,6 +35,7 @@ const Body = () => {
         <div className="filter flex flex-col sm:flex-row gap-4 sm:gap-0">
           <div className="search m-4 p-4">
             <input
+              data-testid="searchInput"
               type="text"
               placeholder="  Search restaurants"
               className="search-box text-navbar text-sm sm:text-base py-1 border-navbar border-1 shadow-2xl rounded-md mx-1"

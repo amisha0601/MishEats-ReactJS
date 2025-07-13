@@ -5,7 +5,10 @@ const RestaurantCard = (props) => {
     resData?.info;
 
   return (
-    <div className="res-card p-4 w-full max-w-[300px] mx-auto rounded-2xl bg-gradient-to-tr from-cardmix to-navbar shadow-2xl/90 shadow-button">
+    <div
+      data-testid="resCard"
+      className="res-card p-4 w-full max-w-[300px] mx-auto rounded-2xl bg-gradient-to-tr from-cardmix to-navbar shadow-2xl/90 shadow-button"
+    >
       <div className="overflow-hidden rounded-xl mb-3">
         <img
           className="res-logo w-full h-[160px] object-cover transition-transform duration-300 hover:scale-105"
@@ -21,7 +24,7 @@ const RestaurantCard = (props) => {
         ⭐ {avgRating} • {costForTwo}
       </h4>
       <h4 className="text-sm text-black mb-1 line-clamp-1">
-        {cuisines.join(", ")}
+        {Array.isArray(cuisines) ? cuisines.join(", ") : "N/A"}
       </h4>
       <h4 className="text-sm text-gray-900 font-semibold">{sla?.slaString}</h4>
     </div>

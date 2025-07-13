@@ -1,32 +1,20 @@
 {
   "name": "MishEats-ReactJS",
   "version": "1.0.0",
-  "description": "Its a food delivery app.",
+  "description": "It's a food delivery app.",
+  "author": "Amisha Singh",
+  "license": "ISC",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "MishEats - ReactJS"
   },
-  "license": "ISC",
-  "author": "Amisha Singh",
-  "type": "commonjs",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
-  "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.3.0",
-    "babel-jest": "^30.0.4",
-    "jest": "^30.0.4",
-    "jest-environment-jsdom": "^30.0.4",
-    "parcel": "^2.15.1",
-    "process": "^0.11.10"
-  },
   "dependencies": {
-    "@parcel/transformer-react-refresh-wrap": "^2.15.4",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.10",
     "lucide-react": "^0.517.0",
@@ -37,7 +25,18 @@
     "react-router-dom": "^6.30.0",
     "tailwindcss": "^4.1.10"
   },
-  "browserslist": [
-    "last 2 versions"
-  ]
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@swc/core": "^1.12.11",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.4",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  }
 }

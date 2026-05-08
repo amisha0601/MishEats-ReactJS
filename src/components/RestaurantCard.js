@@ -1,8 +1,17 @@
+
+import React from "react";
+
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
-    resData?.info;
+  const { 
+    cloudinaryImageId, 
+    name, 
+    cuisines, 
+    avgRating, 
+    costForTwo, 
+    sla 
+  } = resData?.info || {};
 
   return (
     <div
@@ -19,14 +28,14 @@ const RestaurantCard = (props) => {
           alt={name}
         />
       </div>
-      <h3 className="text-2xl font-bold text-text mb-2 line-clamp-1">{name}</h3>
+      <h3 className="text-2xl font-bold text-text mb-2 line-clamp-1">{name || "Restaurant Name"}</h3>
       <h4 className="text-sm text-black font-semibold mb-1">
-        ⭐ {avgRating} • {costForTwo}
+        ⭐ {avgRating || "--"} • {costForTwo || "N/A"}
       </h4>
       <h4 className="text-sm text-black mb-1 line-clamp-1">
         {Array.isArray(cuisines) ? cuisines.join(", ") : "N/A"}
       </h4>
-      <h4 className="text-sm text-gray-900 font-semibold">{sla?.slaString}</h4>
+      <h4 className="text-sm text-gray-900 font-semibold">{sla?.slaString || "--"}</h4>
     </div>
   );
 };

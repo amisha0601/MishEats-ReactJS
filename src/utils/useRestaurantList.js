@@ -1,33 +1,41 @@
+
 import { useState, useEffect } from "react";
 
 const useRestaurantList = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
- 
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-   
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
-      const json = await data.json();
+    try {
+        const response = await fetch("http://localhost:7000/api/restaurants");
+
+      if (!response.ok) {
+        throw new Error(`API failed with status: ${response.status}`);
+      }
+
+      const json = await response.json();
 
       const restaurants =
         json?.data?.cards?.find(
-          (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+          (card) =>
+            card?.card?.card?.gridElements?.infoWithStyle?.restaurants
         )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
       setListOfRestaurants(restaurants);
-      setFilteredRestaurant(restaurants); 
+      setFilteredRestaurant(restaurants);
+    } catch (error) {
+      console.error("Fetch Restaurants Error:", error);
+    }
   };
 
   return {
     listOfRestaurants,
     filteredRestaurant,
-    setFilteredRestaurant
+    setFilteredRestaurant,
   };
 };
 

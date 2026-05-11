@@ -1,0 +1,377 @@
+[
+ {
+  "info": {
+    "id": "101",
+    "name": "Irani Cafe",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/9/8600f5f5-deb7-4ace-8bdd-3289c9a697de_858182.JPG",
+    "locality": "Model Colony, Senapati Bapat Road",
+    "areaName": "Pune",
+    "costForTwo": "₹250 for two",
+    "cuisines": [
+      "Tea",
+      "Snacks",
+      "Fast Food",
+      "Bakery",
+      "Desserts"
+    ],
+    "avgRating": 4.5,
+    "sla": {
+      "deliveryTime": 33,
+      "slaString": "30-35 mins"
+    }
+  }
+},
+  {
+  "info": {
+    "id": "102",
+    "name": "Persian Darbar",
+    "cloudinaryImageId": "7aeb2bbff29d99d6e986240911ce0e71",
+    "locality": "Camp",
+    "areaName": "Camp",
+    "costForTwo": "₹500 for two",
+    "cuisines": [
+      "North Indian",
+      "Biryani",
+      "Mughlai",
+      "Kebabs",
+      "Chinese",
+      "Desserts"
+    ],
+    "avgRating": 4.3,
+    "sla": {
+      "deliveryTime": 31,
+      "slaString": "30-35 mins"
+    }
+  }
+},
+  {
+  "info": {
+    "id": "103",
+    "name": "Havmor Ice Cream",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/17/420939ba-6172-420d-8289-266dc6293dac_1350231.jpg",
+    "locality": "Jangli Maharaj Road",
+    "areaName": "Prabhat Road",
+    "costForTwo": "₹150 for two",
+    "cuisines": [
+      "Ice Cream",
+      "Cakes & Pastries"
+    ],
+    "avgRating": 4.6,
+    "sla": {
+      "deliveryTime": 26,
+      "slaString": "25-30 mins"
+    }
+  }
+},
+  {
+  "info": {
+    "id": "104",
+    "name": "Cafe Arabia",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/5/5/1eb67c0a-f89f-4536-8c04-4616cd61c7a1_120807.jpg",
+    "locality": "Kothrud",
+    "areaName": "Kothrud",
+    "costForTwo": "₹400 for two",
+    "cuisines": [
+      "shawarma",
+      "Rolls & Wraps",
+      "Lebanese",
+      "Arabian",
+      "Fast Food",
+      "Middle Eastern",
+      "Mediterranean"
+    ],
+    "avgRating": 4.3,
+    "sla": {
+      "deliveryTime": 30,
+      "slaString": "25-30 mins"
+    }
+  }
+},
+  {
+    "info": {
+      "id": "105",
+      "name": "Fried Chicken Destination",
+      "cloudinaryImageId": "olrud2iyqeqt5gjibsbc",
+      "locality": "Cantonment Board",
+      "areaName": "Camp",
+      "costForTwo": "₹200 for two",
+      "cuisines": ["Burgers", "American", "Fast Food"],
+      "avgRating": 4.1,
+     "sla": {
+      "deliveryTime": 41,
+      "slaString": "40-45 mins"
+    }
+    }
+  },
+  {
+    "info": {
+      "id": "106",
+      "name": "Good Flippin' Burgers",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/8/e77dd8bf-7777-4490-97c2-86ca28c0a1d2_804128.JPG",
+      "locality": "Shroff Suyash",
+      "areaName": "Baner",
+      "costForTwo": "₹600 for two",
+      "cuisines": ["Burgers", "American", "Fast Food"],
+      "avgRating": 4.6,
+      "sla": {
+      "deliveryTime": 47,
+      "slaString": "50-55 mins"
+    }
+    }
+  },
+  {
+    "info": {
+      "id": "107",
+      "name": "Circle Of Crust",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/19/2fbf17f3-9f0c-4579-86a1-360989092b84_333686.JPG",
+      "locality": "Magarpatta City",
+      "areaName": "Magarpatta",
+      "costForTwo": "₹500 for two",
+      "cuisines": ["Pizzas", "Italian", "Pastas"],
+      "avgRating": 4.1,
+      "sla": {
+      "deliveryTime": 48,
+      "slaString": "48-55 mins"
+    }
+    }
+  },
+  {
+    "info": {
+      "id": "108",
+      "name": "Juno's Pizza",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/59a3930e-3078-4c7d-98f5-7e5df5ac77ee_959640.JPG",
+      "locality": "Paud Road",
+      "areaName": "Sai Sayaji Building",
+      "costForTwo": "₹270 for two",
+      "cuisines": ["Pizzas", "Pastas", "Fast Food"],
+      "avgRating": 4.1,
+      "sla": {
+      "deliveryTime": 40,
+      "slaString": "35-40 mins"
+    }
+    }
+  },
+  {
+    "info": {
+      "id": "109",
+      "name": "The Dessert Zone",
+      "cloudinaryImageId": "c447c9ce7d0bbe78e46141e866236762",
+      "locality": "Karve Road",
+      "areaName": "Kothrud",
+      "costForTwo": "₹200 for two",
+      "cuisines": ["Bakery", "Desserts", "Ice Cream"],
+      "avgRating": 4.2,
+     "sla": {
+      "deliveryTime": 38,
+      "slaString": "40-45 mins"
+    }
+    }
+  },
+  {
+    "info": {
+      "id": "110",
+      "name": "Burger It Up",
+      "cloudinaryImageId": "ab5tjjnzubvork4eatwo",
+      "locality": "Karve Road",
+      "areaName": "Kothrud",
+      "costForTwo": "₹150 for two",
+      "cuisines": ["Burgers", "American", "Cafe"],
+      "avgRating": 3.9,
+      "sla": {
+      "deliveryTime": 20,
+      "slaString": "25-30 mins"
+    }
+    }
+  }
+  ,
+{
+  "info": {
+    "id": "111",
+    "name": "Crusto's - Cheese Burst Pizza By Olio",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/24/06f6b876-9601-402c-a07f-8f9a5c9140f9_869680.JPG",
+    "locality": "Paud Road",
+    "areaName": "Sai Sayaji Building",
+    "costForTwo": "₹300 for two",
+    "cuisines": ["Pizzas", "Italian", "Pastas"],
+    "avgRating": 4.3,
+    "sla": {
+      "deliveryTime": 45,
+      "slaString": "45-55 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "112",
+    "name": "McDonald's",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/3/2fed9048-7210-4240-a468-adcfa1c3110a_23722.JPG",
+    "locality": "Kothrud",
+    "areaName": "Kothrud",
+    "costForTwo": "₹400 for two",
+    "cuisines": [
+      "Burgers",
+      "Beverages",
+      "Cafe",
+      "Desserts"
+    ],
+    "avgRating": 4.4,
+    "sla": {
+      "deliveryTime": 27,
+      "slaString": "25-30 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "113",
+    "name": "Pizza Hut",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/12/dd196a56-86a8-409b-8e29-df0dbbfd76fc_21001.JPG",
+    "locality": "F.C. Road",
+    "areaName": "Shivajinagar",
+    "costForTwo": "₹350 for two",
+    "cuisines": [
+      "Pizzas"
+    ],
+    "avgRating": 4,
+    "sla": {
+      "deliveryTime": 32,
+      "slaString": "30-35 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "114",
+    "name": "Indiana Burgers",
+    "cloudinaryImageId": "lhlqby3ywjrorvo7w5bg",
+    "locality": "Karve Road",
+    "areaName": "Kothrud",
+    "costForTwo": "₹150 for two",
+    "cuisines": ["Burgers", "American", "Desserts"],
+    "avgRating": 3.7,
+    "sla": {
+      "deliveryTime": 43,
+      "slaString": "45-50 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "115",
+    "name": "S Kumar Wadewale",
+    "cloudinaryImageId": "f1bc9ddf53de574cdc35ab2f717df234",
+    "locality": "Aundh",
+    "areaName": "Baner",
+    "costForTwo": "₹200 for two",
+    "cuisines": ["South Indian", "Snacks", "Thalis"],
+    "avgRating": 4.3,
+    "sla": {
+      "deliveryTime": 57,
+      "slaString": "55-60 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "116",
+    "name": "Subway",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/12/9178c225-800c-4c49-9ce9-f9bd0dbcec91_5624.jpg",
+    "locality": "F.C. Road",
+    "areaName": "Prabhat Road",
+    "costForTwo": "₹350 for two",
+    "cuisines": [
+      "Sandwich",
+      "Salads",
+      "Wraps",
+      "Healthy Food"
+    ],
+    "avgRating": 4.2,
+    "sla": {
+      "deliveryTime": 21,
+      "slaString": "20-25 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "117",
+    "name": "WarmOven Cake & Desserts",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/10/69da235b-2daa-4084-a18e-52b42d69e433_213654.JPG",
+    "locality": "Kothrud",
+    "areaName": "Kothrud",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+      "Bakery",
+      "Desserts",
+      "Ice Cream",
+      "Beverages",
+      "Cakes"
+    ],
+    "avgRating": 4.1,
+    "sla": {
+      "deliveryTime": 30,
+      "slaString": "25-30 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "118",
+    "name": "Kwality Wall's Ice Cream And More",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/13/4bfad26d-f21e-44ff-b549-f123e30fcff1_307668.JPG",
+    "locality": "Pushpanjali Appartment",
+    "areaName": "Karve Nagar",
+    "costForTwo": "₹300 for two",
+    "cuisines": [
+      "Desserts",
+      "Ice Cream",
+      "Ice Cream Cakes"
+    ],
+    "avgRating": 4.6,
+    "sla": {
+      "deliveryTime": 28,
+      "slaString": "25-30 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "119",
+    "name": "Momo Zone - The Momo Company",
+    "cloudinaryImageId": "ei260l9oypc41ptbewdn",
+    "locality": "Kothrud",
+    "areaName": "Kothrud",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+      "Chinese",
+      "Tibetan",
+      "Fast Food",
+      "Momos"
+    ],
+    "avgRating": 3.4,
+    "sla": {
+      "deliveryTime": 35,
+      "slaString": "30-35 mins"
+    }
+  }
+},
+{
+  "info": {
+    "id": "120",
+    "name": "Dadu's Sweet Emporio",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/8/93c84739-f8a0-4b6f-9dc7-c38e13025750_39102.jpg",
+    "locality": "Koregaon Park",
+    "areaName": "KP",
+    "costForTwo": "₹600 for two",
+    "cuisines": ["Desserts", "Bakery", "Ice Cream"],
+    "avgRating": 4.6,
+    "sla": {
+      "deliveryTime": 32,
+      "slaString": "30-35 mins"
+    }
+  }
+}
+]
+
+
+

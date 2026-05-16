@@ -7,7 +7,7 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "MishEats - ReactJS"
+    "url": "https://github.com/amisha0601/MishEats-ReactJS.git"
   },
   "scripts": {
     "start": "parcel index.html",

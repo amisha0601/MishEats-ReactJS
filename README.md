@@ -54,13 +54,23 @@ The project focuses on reusable components, routing, state management, custom ho
 
 ### Homepage Image
 
+<img width="1353" height="645" alt="Image" src="https://github.com/user-attachments/assets/29e369e9-eed5-4091-9a2f-17a88b3374b9" />
+
 ### Restaurant Menu Image
+
+<img width="1352" height="639" alt="Image" src="https://github.com/user-attachments/assets/c3f2131b-2eff-4f91-beb9-4f7902afe1e7" />
 
 ### Checkout Cart Image
 
+<img width="1094" height="622" alt="Image" src="https://github.com/user-attachments/assets/7e2e5fd9-b254-4c59-9651-cf011645aeb6" />
+
 ### Offline Mode + Memory Game Image
 
+<img width="1001" height="639" alt="Image" src="https://github.com/user-attachments/assets/042a44d5-bf71-4a5e-86f6-88447bd68458" />
+
 ### Contact Page Image
+
+<img width="1351" height="637" alt="Image" src="https://github.com/user-attachments/assets/2afb676d-986f-4d6d-aaa0-a9d07a042745" />
 
 ---
 
